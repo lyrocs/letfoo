@@ -4,7 +4,6 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { Script } from "gatsby";
 import Img from "gatsby-image";
-import "../styles/page.scss";
 
 const BlogPost = ({ data, children }) => {
   return (
