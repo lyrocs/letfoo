@@ -3,6 +3,8 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="My Blog Posts">
@@ -15,9 +17,17 @@ const BlogPage = ({ data }) => {
             <h2>
               <Link to={`${node.frontmatter.slug}`}>
                 {node.frontmatter.title}
+                {/* {JSON.stringify(node)} */}
               </Link>
             </h2>
-            <p>Posted: {node.frontmatter.date}</p>
+            <GatsbyImage
+              image={getImage(
+                node.frontmatter?.image?.childImageSharp?.gatsbyImageData
+              )}
+            />
+            {/* <p>Posted: {node.frontmatter.date}</p> */}
+            <p>description: {node.frontmatter.description}</p>
+            <p>Category: {node.frontmatter.category}</p>
           </article>
         ))}
       </ul>
@@ -33,6 +43,13 @@ export const query = graphql`
           date(formatString: "MMMM D, YYYY")
           title
           slug
+          category
+          description
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 256, height: 256)
+            }
+          }
         }
         id
       }
