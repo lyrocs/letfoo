@@ -1,4 +1,4 @@
-import remarkGfm from "remark-gfm"
+import remarkGfm from "remark-gfm";
 /**
  * Configure your Gatsby site with this file.
  *
@@ -16,6 +16,7 @@ const config = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     "gatsby-plugin-postcss",
     `gatsby-plugin-image`,
     {
@@ -63,6 +64,6 @@ const config = {
       },
     },
   ],
-}
+};
 
-export default config
+export default config;
