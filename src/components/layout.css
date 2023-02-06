@@ -25,6 +25,10 @@
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
 }
+@font-face {
+  font-family: 'Arvo';
+  src: url('/fonts/Arvo/Arvo-Regular.ttf');
+}
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
