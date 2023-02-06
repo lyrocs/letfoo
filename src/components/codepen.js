@@ -3,9 +3,8 @@ import * as React from "react";
 const Codepen = ({ hash }) => {
   return (
     <>
-      <span>COOOUCOU {hash}</span>
       <p
-        class="codepen"
+        className="codepen"
         data-height="300"
         data-default-tab="html,result"
         data-slug-hash={hash}

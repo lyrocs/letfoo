@@ -15,6 +15,7 @@ const BlogPost = ({ data, children }) => {
         image={getImage(
           data.mdx.frontmatter?.image?.childImageSharp?.gatsbyImageData
         )}
+        alt={data.mdx.frontmatter.title}
       />
       {/* <Img fixed={data.image.childImageSharp.fixed} /> */}
       <Script src="https://cpwebassets.codepen.io/assets/embed/ei.js" />
