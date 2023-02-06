@@ -3,18 +3,26 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="My Blog Posts">
-      <ul>
+      <ul className="grid grid-cols-2 gap-4">
         {data.allMdx.nodes.map((node) => (
           <article key={node.id}>
             <h2>
-              <Link to={`/blog/${node.frontmatter.slug}`}>
+              <Link to={`${node.frontmatter.slug}`}>
                 {node.frontmatter.title}
               </Link>
             </h2>
-            <p>Posted: {node.frontmatter.date}</p>
+            <GatsbyImage
+              image={getImage(
+                node.frontmatter?.image?.childImageSharp?.gatsbyImageData
+              )}
+            />
+            <p>description: {node.frontmatter.description}</p>
+            <p>Category: {node.frontmatter.category}</p>
           </article>
         ))}
       </ul>
@@ -30,6 +38,13 @@ export const query = graphql`
           date(formatString: "MMMM D, YYYY")
           title
           slug
+          category
+          description
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 256, height: 256)
+            }
+          }
         }
         id
       }
