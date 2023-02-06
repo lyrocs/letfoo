@@ -63,6 +63,12 @@ const config = {
         path: "./mdx",
       },
     },
+    {
+      resolve: "gatsby-plugin-vercel",
+      options: {
+        debug: true,
+      },
+    },
   ],
 };
 
