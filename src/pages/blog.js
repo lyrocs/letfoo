@@ -8,16 +8,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="My Blog Posts">
-      <h1 className="text-3xl font-bold underline text-emerald-500">
-        Hello world!
-      </h1>
-      <ul>
+      <ul className="grid grid-cols-2 gap-4">
         {data.allMdx.nodes.map((node) => (
           <article key={node.id}>
             <h2>
               <Link to={`${node.frontmatter.slug}`}>
                 {node.frontmatter.title}
-                {/* {JSON.stringify(node)} */}
               </Link>
             </h2>
             <GatsbyImage
@@ -25,7 +21,6 @@ const BlogPage = ({ data }) => {
                 node.frontmatter?.image?.childImageSharp?.gatsbyImageData
               )}
             />
-            {/* <p>Posted: {node.frontmatter.date}</p> */}
             <p>description: {node.frontmatter.description}</p>
             <p>Category: {node.frontmatter.category}</p>
           </article>

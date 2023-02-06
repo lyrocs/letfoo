@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => (
         >
           Home
         </Link>
-        <Link
+        {/* <Link
           to="/"
           class="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
         >
@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => (
           class="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
         >
           Home
-        </Link>
+        </Link> */}
       </div>
 
       <div className="flex justify-between w-full md:w-auto">Let Foo;</div>
@@ -32,9 +32,9 @@ const Header = ({ siteTitle }) => (
           to="/"
           class="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
         >
-          Home
+          Frameworks
         </Link>
-        <Link
+        {/* <Link
           to="/"
           class="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
         >
@@ -45,7 +45,7 @@ const Header = ({ siteTitle }) => (
           class="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
         >
           Home
-        </Link>
+        </Link> */}
       </div>
     </nav>
   </header>
