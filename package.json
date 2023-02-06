@@ -9,7 +9,6 @@
     "@vercel/gatsby-plugin-vercel-analytics": "^1.0.7",
     "gatsby": "^5.5.0",
     "gatsby-image": "^3.11.0",
-    "gatsby-plugin-amplitude-analytics": "^3.2.0",
     "gatsby-plugin-image": "^3.5.0",
     "gatsby-plugin-manifest": "^5.5.0",
     "gatsby-plugin-mdx": "^5.5.0",
