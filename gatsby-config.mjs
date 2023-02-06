@@ -94,6 +94,13 @@ const config = {
         // Specify NODE_ENVs in which the plugin should be loaded (optional)
       },
     },
+    {
+      resolve: "@vercel/gatsby-plugin-vercel-analytics",
+      options: {
+        // (optional) Prints metrics in the console when true
+        debug: false,
+      },
+    },
   ],
 };
 
